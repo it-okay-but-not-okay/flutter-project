@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+// import 'package:hello_world/screen/Form_Screen.dart';
+import 'package:hello_world/screen/test_design.dart';
+// import 'package:hello_world/screen/list_view_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
@@ -17,27 +20,28 @@ class _HomeScreenState extends State<HomeScreen> {
           title: Text("My first Project"),
         ),
         body: Center(
-          child: Container(
-            width: 500,
-            height: 500,
-            color: Colors.lightBlue,
-            child: Image.asset('assets/images/pixel.png'),
-            ),
+          child: Row(
+            children: [
+              Container(
+                color: Colors.lightBlue,
+                child: Image.asset('assets/images/pixel.png'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => TestDesign(),
+                    ),
+                    
+                  );
+                },
+                child: Text("Click Me"),
+                
+              )
+            ],
+          ),
         ),
-        bottomNavigationBar: BottomNavigationBar(items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.phone),
-            label: "phone",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.dashboard_customize),
-            label: "dashboard",
-          ),
-        ]),
       ),
     );
   }
