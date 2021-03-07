@@ -49,6 +49,7 @@ class _ExampleScreenState extends State<ExampleScreen> {
                       color: Colors.red.shade200,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("One",style: TextStyle(
                             color:Colors.white,
@@ -70,6 +71,7 @@ class _ExampleScreenState extends State<ExampleScreen> {
                       color: Colors.blue.shade200,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("One",style: TextStyle(
                             color:Colors.white,
